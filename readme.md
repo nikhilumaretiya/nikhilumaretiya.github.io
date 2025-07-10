@@ -1,6 +1,6 @@
 ## 👋 About Me
 
-Hi, I'm **Nikhil**, a Full-Stack Web Developer with over 7 years of experience specializing in **WordPress (Sage 10 + Bedrock)**, **PHP**, **Laravel**, and **Shopify**. I craft modern, scalable websites and applications using clean, maintainable code and follow best development practices. Passionate about performance optimization, custom theme/plugin development, and delivering user-friendly web solutions.
+Hi, I'm **Nikhil**, a Full-Stack PHP Developer with over 7 years of experience specializing in **WordPress (Sage 10 + Bedrock)**, **PHP**, **Laravel**, and **Shopify**. I craft modern, scalable websites and applications using clean, maintainable code and follow best development practices. Passionate about performance optimization, custom theme/plugin development, and delivering user-friendly web solutions.
 
 ---
 
@@ -48,7 +48,6 @@ Hi, I'm **Nikhil**, a Full-Stack Web Developer with over 7 years of experience s
 ## 🎓 Education
 
 - **Master's in Computer Science (MSC.IT)**  
----
 
 ---
 
