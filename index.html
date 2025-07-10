@@ -1,94 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikhil's Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nikhil – Full-Stack PHP Developer</title>
+
+    <!-- ====== Base styles (keep lightweight for fast loads) ====== -->
+    <style>
+        :root {
+            --accent: #2563eb;
+            /* Tailwind’s blue-600 as a hex */
+            --bg: #f5f6fa;
+            --text: #1e293b;
+            --muted: #64748b;
+            font-size: 16px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3 {
+            line-height: 1.3;
+        }
+
+        .container {
+            width: min(90%, 960px);
+            margin-inline: auto;
+            padding-block: 2.5rem;
+        }
+
+        header {
+            text-align: center;
+            padding-block: 3rem 1rem;
+        }
+
+        header h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+        }
+
+        header p {
+            color: var(--muted);
+            margin-top: .5rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        nav a {
+            font-weight: 500;
+        }
+
+        section {
+            padding-block: 3rem 2rem;
+        }
+
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        /* 1-col mobile → 2-col tablet+ for projects  */
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width:640px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .card {
+            background: #fff;
+            border-radius: .75rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 0.5rem;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, .12);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+            margin-top: .75rem;
+        }
+
+        .skills-list span {
+            background: var(--accent);
+            color: #fff;
+            padding: .25rem .65rem;
+            border-radius: 999px;
+            font-size: .875rem;
+        }
+
+        /* simple contact form */
+        form {
+            display: grid;
+            gap: .75rem;
+            max-width: 480px;
+            margin-inline: auto;
+        }
+
+        input,
+        textarea,
+        button {
+            padding: .65rem 1rem;
+            font: inherit;
+            border: 1px solid #cbd5e1;
+            border-radius: .5rem;
+        }
+
+        textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        button {
+            background: var(--accent);
+            color: #fff;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover {
+            opacity: .9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            font-size: .875rem;
+            color: var(--muted);
+        }
+    </style>
 </head>
+
 <body>
 
-<div id="app" class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Nikhil's Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+    <!-- ====== HERO ====== -->
+    <header id="top">
+        <h1>Nikhil Umaretiya</h1>
+        <p>Full-stack PHP / WordPress / Laravel developer crafting fast, scalable web solutions.</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ====== ABOUT ====== -->
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <p style="margin-top:1rem;">
+                I’m Nikhil, a developer based in India with 7+ years of experience building custom WordPress
+                themes (Sage 10 + Bedrock), Laravel SaaS apps, and Shopify storefronts. I love turning
+                complex requirements into clean, maintainable code and contributing to open-source projects
+                whenever I can.
+            </p>
+        </section>
+
+        <!-- ====== PROJECTS ====== -->
+        <section id="projects" class="container">
+            <h2>Featured Projects</h2>
+            <div class="grid projects-grid" style="margin-top:1.5rem;">
+
+                <article class="card">
+                    <img src="your-project-image.jpg" alt="Project 1" style="width:100%; border-radius:0.5rem;" />
+                    <h3>Inventory Dashboard (Laravel)</h3>
+                    <p>Analytics + filters, exports, stock movement tracking.</p>
+                    <a href="https://yourapp.com" target="_blank" rel="noopener">Live Demo ↗</a>
+                </article>
+
+                <article class="card">
+                    <img src="your-second-project.jpg" alt="Project 2" style="width:100%; border-radius:0.5rem;" />
+                    <h3>Custom WooCommerce Theme</h3>
+                    <p>Built using Sage 10, ACF Blocks, and performance tweaks (95+ Lighthouse score).</p>
+                    <a href="https://clientstore.com" target="_blank" rel="noopener">Visit Site ↗</a>
+                </article>
+
             </div>
-        </div>
-    </nav>
 
-    <div class="text-center mt-5">
-        <h1>Welcome to My Portfolio</h1>
-        <p>This is a showcase of my projects and skills.</p>
-    </div>
+        </section>
 
-    <div id="portfolio" class="mt-5">
-        <h2>Portfolio</h2>
-        <div class="row">
-            <!-- Portfolio items will be inserted here by Vue -->
-            <portfolio-item
-                v-for="item in portfolioItems"
-                :key="item.id"
-                :name="item.name"
-                :image="item.image"
-                :description="item.description">
-            </portfolio-item>
-        </div>
-    </div>
+        <!-- ====== SKILLS ====== -->
+        <section id="skills" class="container">
+            <h2>Tech Toolbox</h2>
+            <div class="skills-list">
+                <span>PHP</span><span>Laravel</span><span>WordPress</span><span>Sage 10</span>
+                <span>Bedrock</span><span>WooCommerce</span><span>Shopify Liquid</span>
+                <span>JavaScript</span><span>SCSS</span><span>Docker</span><span>Git</span>
+            </div>
+        </section>
 
-    <footer class="text-center mt-5 mb-3">
-        <p>&copy; 2024 Nikhil. All rights reserved.</p>
+        <!-- ====== CONTACT ====== -->
+        <section id="contact" class="container">
+            <h2>Get in Touch</h2>
+            <!-- modify this form HTML and place wherever you want your form -->
+            <form id="my-form" action="https://formspree.io/f/xvgreobl" method="POST">
+                <label>Email:</label>
+                <input type="email" name="email" />
+                <label>Message:</label>
+                <input type="text" name="message" />
+                <button id="my-form-button">Submit</button>
+                <p id="my-form-status"></p>
+            </form>
+
+            <!-- Place this script at the end of the body tag -->
+            <script>
+                var form = document.getElementById("my-form");
+
+                async function handleSubmit(event) {
+                    event.preventDefault();
+                    var status = document.getElementById("my-form-status");
+                    var data = new FormData(event.target);
+                    fetch(event.target.action, {
+                        method: form.method,
+                        body: data,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    }).then(response => {
+                        if (response.ok) {
+                            status.innerHTML = "Thanks for your submission!";
+                            form.reset()
+                        } else {
+                            response.json().then(data => {
+                                if (Object.hasOwn(data, 'errors')) {
+                                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                                } else {
+                                    status.innerHTML = "Oops! There was a problem submitting your form"
+                                }
+                            })
+                        }
+                    }).catch(error => {
+                        status.innerHTML = "Oops! There was a problem submitting your form"
+                    });
+                }
+                form.addEventListener("submit", handleSubmit)
+            </script>
+        </section>
+    </main>
+
+    <footer>
+        © <span id="year"></span> Nikhil Umaretiya • Built with ♥ and vanilla HTML/CSS
     </footer>
-</div>
 
-<!-- Vue.js -->
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
-<!-- Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-<script>
-Vue.component('portfolio-item', {
-    props: ['name', 'image', 'description'],
-    template: `
-    <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-            <img :src="image" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">{{ name }}</h5>
-                <p class="card-text">{{ description }}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-    </div>
-    `
-});
-
-var app = new Vue({
-    el: '#app',
-    data: {
-        portfolioItems: [
-            { id: 1, name: 'Project 1', image: 'path/to/image1.jpg', description: 'Description of Project 1' },
-            { id: 2, name: 'Project 2', image: 'path/to/image2.jpg', description: 'Description of Project 2' },
-            { id: 3, name: 'Project 3', image: 'path/to/image3.jpg', description: 'Description of Project 3' }
-        ]
-    }
-});
-</script>
+    <script>
+        // update footer year automatically
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
+
 </html>
