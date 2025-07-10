@@ -146,10 +146,6 @@
                     </li>
 
                     <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Blog</button>
-                    </li>
-
-                    <li class="navbar-item">
                         <button class="navbar-link" data-nav-link>Contact</button>
                     </li>
                 </ul>
@@ -587,10 +583,10 @@
                     <ul class="project-list">
 
                         <!-- WordPress Project -->
-                        <li class="project-item active" data-filter-item data-category="WordPress">
+                        <li class="project-item active" data-filter-item data-category="wordpress">
                             <a href="https://railestatesearch.co.uk" target="_blank">
                                 <figure class="project-img">
-                                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                                    <!-- <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div> -->
                                     <img src="./assets/images/portfolio/wp-real-estate.png"
                                         alt="Custom WordPress Real Estate Website" loading="lazy" />
                                 </figure>
@@ -600,10 +596,10 @@
                         </li>
 
                         <!-- WooCommerce Project -->
-                        <li class="project-item active" data-filter-item data-category="WordPress">
+                        <li class="project-item active" data-filter-item data-category="wordpress">
                             <a href="https://www.atenlighting.co.uk" target="_blank">
                                 <figure class="project-img">
-                                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                                    <!-- <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div> -->
                                     <img src="./assets/images/portfolio/wp-woocommerce.png"
                                         alt="WooCommerce Online Store" loading="lazy" />
                                 </figure>
@@ -613,10 +609,10 @@
                         </li>
 
                         <!-- Information + WooCommerce Project -->
-                        <li class="project-item active" data-filter-item data-category="WordPress">
+                        <li class="project-item active" data-filter-item data-category="wordpress">
                             <a href="https://revivelogix.com" target="_blank">
                                 <figure class="project-img">
-                                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                                    <!-- <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div> -->
                                     <img src="./assets/images/portfolio/sage-theme-woo.png" alt="WooCommerce Store"
                                         loading="lazy" />
                                 </figure>
@@ -626,10 +622,10 @@
                         </li>
 
                         <!-- Laravel Project -->
-                        <li class="project-item active" data-filter-item data-category="Laravel">
+                        <li class="project-item active" data-filter-item data-category="laravel">
                             <a href="https://app.axiompersonnel.co.uk/login" target="_blank">
                                 <figure class="project-img">
-                                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                                    <!-- <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div> -->
                                     <img src="./assets/images/portfolio/laravel-crm.png" alt="Laravel CRM System"
                                         loading="lazy" />
                                 </figure>
@@ -639,10 +635,10 @@
                         </li>
 
                         <!-- Laravel + API -->
-                        <li class="project-item active" data-filter-item data-category="Laravel">
+                        <li class="project-item active" data-filter-item data-category="laravel">
                             <a href="https://quiickmedicine.ca" target="_blank">
                                 <figure class="project-img">
-                                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                                    <!-- <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div> -->
                                     <img src="./assets/images/portfolio/laravel-inventory.png"
                                         alt="Laravel Inventory App" loading="lazy" />
                                 </figure>
@@ -652,10 +648,10 @@
                         </li>
 
                         <!-- Shopify Project -->
-                        <li class="project-item active" data-filter-item data-category="Shopify">
+                        <li class="project-item active" data-filter-item data-category="shopify">
                             <a href="https://pumpingstations.uk" target="_blank">
                                 <figure class="project-img">
-                                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                                    <!-- <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div> -->
                                     <img src="./assets/images/portfolio/shopify-theme.png" alt="Shopify"
                                         loading="lazy" />
                                 </figure>
@@ -707,6 +703,40 @@
   -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Place this script at the end of the body tag -->
+    <script>
+        var form = document.getElementById("my-form");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var status = document.getElementById("my-form-status");
+            var data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    status.innerHTML = "Thanks for your submission!";
+                    form.reset()
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                        } else {
+                            status.innerHTML = "Oops! There was a problem submitting your form"
+                        }
+                    })
+                }
+            }).catch(error => {
+                status.innerHTML = "Oops! There was a problem submitting your form"
+            });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
 </body>
 
 </html>
