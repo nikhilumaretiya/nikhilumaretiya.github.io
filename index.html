@@ -2,300 +2,675 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nikhil – Full-Stack PHP Developer</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nikhil – Full-Stack PHP Developer</title>
 
-    <!-- ====== Base styles (keep lightweight for fast loads) ====== -->
-    <style>
-        :root {
-            --accent: #2563eb;
-            /* Tailwind’s blue-600 as a hex */
-            --bg: #f5f6fa;
-            --text: #1e293b;
-            --muted: #64748b;
-            font-size: 16px;
-        }
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
 
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
 
-        body {
-            font-family: system-ui, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background: var(--bg);
-        }
-
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        h1,
-        h2,
-        h3 {
-            line-height: 1.3;
-        }
-
-        .container {
-            width: min(90%, 960px);
-            margin-inline: auto;
-            padding-block: 2.5rem;
-        }
-
-        header {
-            text-align: center;
-            padding-block: 3rem 1rem;
-        }
-
-        header h1 {
-            font-size: 2.25rem;
-            font-weight: 700;
-        }
-
-        header p {
-            color: var(--muted);
-            margin-top: .5rem;
-        }
-
-        nav ul {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 1.5rem;
-        }
-
-        nav a {
-            font-weight: 500;
-        }
-
-        section {
-            padding-block: 3rem 2rem;
-        }
-
-        .grid {
-            display: grid;
-            gap: 2rem;
-        }
-
-        /* 1-col mobile → 2-col tablet+ for projects  */
-        .projects-grid {
-            grid-template-columns: 1fr;
-        }
-
-        @media (min-width:640px) {
-            .projects-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        .card {
-            background: #fff;
-            border-radius: .75rem;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            transition: transform .2s ease, box-shadow .2s ease;
-        }
-
-        .card img {
-            width: 100%;
-            border-radius: 0.5rem;
-            aspect-ratio: 16/9;
-            object-fit: cover;
-        }
-
-
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 14px rgba(0, 0, 0, .12);
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: .5rem;
-            margin-top: .75rem;
-        }
-
-        .skills-list span {
-            background: var(--accent);
-            color: #fff;
-            padding: .25rem .65rem;
-            border-radius: 999px;
-            font-size: .875rem;
-        }
-
-        /* simple contact form */
-        form {
-            display: grid;
-            gap: .75rem;
-            max-width: 480px;
-            margin-inline: auto;
-        }
-
-        input,
-        textarea,
-        button {
-            padding: .65rem 1rem;
-            font: inherit;
-            border: 1px solid #cbd5e1;
-            border-radius: .5rem;
-        }
-
-        textarea {
-            min-height: 140px;
-            resize: vertical;
-        }
-
-        button {
-            background: var(--accent);
-            color: #fff;
-            cursor: pointer;
-            border: none;
-        }
-
-        button:hover {
-            opacity: .9;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem 0;
-            font-size: .875rem;
-            color: var(--muted);
-        }
-    </style>
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 
 <body>
+  <!--
+    - #MAIN
+  -->
 
-    <!-- ====== HERO ====== -->
-    <header id="top">
-        <h1>Nikhil Umaretiya</h1>
-        <p>Full-stack PHP / WordPress / Laravel developer crafting fast, scalable web solutions.</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Work</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+  <main>
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Nikhil Umaretiya" width="80" />
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Nikhil Umaretiya">Nikhil Umaretiya</h1>
+
+          <p class="title">
+            Full-stack PHP / WordPress / Laravel developer crafting fast,
+            scalable web solutions.
+          </p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:richard@example.com" class="contact-link">nikhilumaretiya17@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+91 8905882895" class="contact-link">+91 89058 82895</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>INDIA</address>
+            </div>
+          </li>
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon class="socials-icons" name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <!-- <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon class="socials-icons" name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon class="socials-icons" name="logo-instagram"></ion-icon>
+            </a>
+          </li> -->
+        </ul>
+      </div>
+    </aside>
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+        </ul>
+      </nav>
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about active" data-page="about">
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I’m Nikhil, a Full-stack PHP developer based in India with 7+ years of experience building custom WordPress
+            themes (Sage 10 + Bedrock), Laravel SaaS apps, and Shopify storefronts. I love turning
+            complex requirements into clean, maintainable code and contributing to open-source projects
+            whenever I can.
+          </p>
+
+          <p>
+            I focus on writing clean, maintainable code and delivering user-friendly solutions that solve real business
+            problems. Whether it’s building custom themes, optimizing backend workflows, or integrating APIs, I always
+            aim to blend functionality with great UI/UX. I’m also passionate about open-source and continuously learning
+            to stay ahead in the evolving web ecosystem.
+          </p>
+        </section>
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+          <h3 class="h3 service-title">What I'm Doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web Development" width="40" />
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Custom WordPress Development</h4>
+                <p class="service-item-text">
+                  Building high-performance WordPress sites using Sage 10, Bedrock, and ACF. Clean code, fast load
+                  times, and SEO-friendly structure.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Laravel Development" width="40" />
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Laravel Web Applications</h4>
+                <p class="service-item-text">
+                  Developing scalable Laravel applications including admin panels, REST APIs, multi-user portals, and
+                  custom dashboards.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="Shopify Design" width="40" />
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Shopify Customization</h4>
+                <p class="service-item-text">
+                  Creating and customizing Shopify themes with Liquid and adding tailored features to enhance your
+                  store's performance.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="UI/UX Design" width="40" />
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Responsive Frontend Design</h4>
+                <p class="service-item-text">
+                  Crafting responsive, mobile-first interfaces using HTML, SCSS, JavaScript, and modern UI frameworks.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Craig lewis" width="60" data-testimonials-avatar />
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>
+                  Craig lewis
+                </h4>
+
+                <time datetime="2022-08-24" data-testimonials-time>24 August, 2022</time>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Nikhil helped us build a completely custom WordPress site using ACF and Sage 10. He was quick,
+                    detail-oriented, and communicated clearly throughout the project. Our site now loads faster and
+                    converts better than ever.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Sarah Hilton" width="60" data-testimonials-avatar />
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>
+                  Sarah Hilton
+                </h4>
+
+                <time datetime="2023-05-17" data-testimonials-time>17 May, 2023</time>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    We hired Nik to build a Laravel-based CRM. He exceeded our expectations with clean code and an
+                    intuitive dashboard. Post-launch, he continued to support us with improvements and maintenance.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-3.png" alt="Ashley evans" width="60" data-testimonials-avatar />
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>
+                  Ashley evans
+                </h4>
+
+                <time datetime="2023-10-28" data-testimonials-time>28 October, 2023</time>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Nikhil built a custom WordPress theme for our real estate website using Sage 10 and ACF. The code
+                    was clean, SEO-friendly, and easy to manage. His understanding of WordPress architecture and modern
+                    dev workflows really impressed us. Highly recommended!
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Lisa william" width="60" data-testimonials-avatar />
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>
+                  Lisa william
+                </h4>
+
+                <time datetime="2024-06-14" data-testimonials-time>14 June, 2024</time>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    We needed a fast, mobile-friendly WooCommerce store with custom product filters and cart
+                    functionality. Nikhil delivered a pixel-perfect site that’s now 3x faster and more user-friendly.
+                    His expertise in WordPress, WooCommerce, and performance optimization was outstanding.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img />
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon" />
+            </div>
+
+            <div class="modal-content">
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14" data-modal-time>14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were
+                  very pleased with the work done. She has a lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum
+                  dolor sit amet, ullamcous cididt consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels
+                  dolore magnarels alia.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!--
+        - #RESUME
+        -->
+
+        <article class="resume" data-page="resume">
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+          </header>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Experience</h3>
+            </div>
+
+            <ol class="timeline-list">
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Professional Freelancer</h4>
+
+                <span>Jul 2020 - Present · 5 yrs 1 mo</span>
+
+                <p class="timeline-text">
+                  Working independently with global clients on full-stack projects using PHP, Laravel, WordPress (Sage
+                  10 + Bedrock), and Shopify. Delivered custom themes, SaaS platforms, WooCommerce integrations, and
+                  performance-optimized websites. Collaborated with cross-functional teams to ensure client satisfaction
+                  and business alignment.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">PHP Web Developer</h4>
+
+                <span>Jan 2021 - Jul 2022 · 1 yr 7 mos</span>
+
+                <p class="timeline-text">
+                  Developed and maintained enterprise web applications using PHP, MySQL, and MVC frameworks. Integrated
+                  APIs, built admin dashboards, and worked on optimizing codebases for speed and scalability.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Trainee</h4>
+
+                <span>Apr 2018 - Jul 2018 · 4 mos</span>
+
+                <p class="timeline-text">
+                  Completed hands-on training in core PHP, HTML/CSS, JavaScript, and MySQL. Built basic CMS, CRUD
+                  operations, and responsive layouts during internship with live deployment experience.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="skill">
+            <h3 class="h3 skills-title">My skills</h3>
+
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">PHP & Laravel</h5>
+                  <data value="90">90%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">WordPress (Sage 10 + ACF)</h5>
+                  <data value="95">95%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 95%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">WooCommerce & Shopify</h5>
+                  <data value="85">85%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 85%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">HTML, SCSS, JS (Frontend)</h5>
+                  <data value="80">80%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Git & Deployment</h5>
+                  <data value="75">75%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 75%"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Problem Solving</h5>
+                  <data value="90">90%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Client Communication</h5>
+                  <data value="85">85%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 85%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Time Management</h5>
+                  <data value="88">88%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 88%"></div>
+                </div>
+              </li>
             </ul>
-        </nav>
-    </header>
+          </section>
+        </article>
 
-    <main>
-        <!-- ====== ABOUT ====== -->
-        <section id="about" class="container">
-            <h2>About Me</h2>
-            <p style="margin-top:1rem;">
-                I’m Nikhil, a developer based in India with 7+ years of experience building custom WordPress
-                themes (Sage 10 + Bedrock), Laravel SaaS apps, and Shopify storefronts. I love turning
-                complex requirements into clean, maintainable code and contributing to open-source projects
-                whenever I can.
-            </p>
-        </section>
+        <!--
+        - #PORTFOLIO
+        -->
 
-        <!-- ====== PROJECTS ====== -->
-        <section id="projects" class="container">
-            <h2>Featured Projects</h2>
-            <div class="grid projects-grid" style="margin-top:1.5rem;">
+        <article class="portfolio" data-page="portfolio">
+          <header>
+            <h2 class="h2 article-title">Portfolio</h2>
+          </header>
 
-                <article class="card">
-                    <img src="your-project-image.jpg" alt="Project 1" style="width:100%; border-radius:0.5rem;" />
-                    <h3>Inventory Dashboard (Laravel)</h3>
-                    <p>Analytics + filters, exports, stock movement tracking.</p>
-                    <a href="https://yourapp.com" target="_blank" rel="noopener">Live Demo ↗</a>
-                </article>
+          <section class="projects">
+            <ul class="filter-list">
+              <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+              <li class="filter-item"><button data-filter-btn>WordPress</button></li>
+              <li class="filter-item"><button data-filter-btn>Laravel</button></li>
+              <li class="filter-item"><button data-filter-btn>Shopify</button></li>
+            </ul>
 
-                <article class="card">
-                    <img src="your-second-project.jpg" alt="Project 2" style="width:100%; border-radius:0.5rem;" />
-                    <h3>Custom WooCommerce Theme</h3>
-                    <p>Built using Sage 10, ACF Blocks, and performance tweaks (95+ Lighthouse score).</p>
-                    <a href="https://clientstore.com" target="_blank" rel="noopener">Visit Site ↗</a>
-                </article>
+            <div class="filter-select-box">
+              <button class="filter-select" data-select>
+                <div class="select-value" data-selecct-value>Select category</div>
+                <div class="select-icon"><ion-icon name="chevron-down"></ion-icon></div>
+              </button>
 
+              <ul class="select-list">
+                <li class="select-item"><button data-select-item>All</button></li>
+                <li class="select-item"><button data-select-item>WordPress</button></li>
+                <li class="select-item"><button data-select-item>Laravel</button></li>
+                <li class="select-item"><button data-select-item>Shopify</button></li>
+              </ul>
             </div>
 
-        </section>
+            <ul class="project-list">
 
-        <!-- ====== SKILLS ====== -->
-        <section id="skills" class="container">
-            <h2>Tech Toolbox</h2>
-            <div class="skills-list">
-                <span>PHP</span><span>Laravel</span><span>WordPress</span><span>Sage 10</span>
-                <span>Bedrock</span><span>WooCommerce</span><span>Shopify Liquid</span>
-                <span>JavaScript</span><span>SCSS</span><span>Docker</span><span>Git</span>
-            </div>
-        </section>
+              <!-- WordPress Project -->
+              <li class="project-item active" data-filter-item data-category="WordPress">
+                <a href="https://railestatesearch.co.uk" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/portfolio/wp-real-estate.png" alt="Custom WordPress Real Estate Website"
+                      loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">Real Estate Theme</h3>
+                  <p class="project-category">WordPress</p>
+                </a>
+              </li>
 
-        <!-- ====== CONTACT ====== -->
-        <section id="contact" class="container">
-            <h2>Get in Touch</h2>
-            <!-- modify this form HTML and place wherever you want your form -->
-            <form id="my-form" action="https://formspree.io/f/xvgreobl" method="POST">
-                <label>Email:</label>
-                <input type="email" name="email" />
-                <label>Message:</label>
-                <input type="text" name="message" />
-                <button id="my-form-button">Submit</button>
-                <p id="my-form-status"></p>
+              <!-- WooCommerce Project -->
+              <li class="project-item active" data-filter-item data-category="WordPress">
+                <a href="https://www.atenlighting.co.uk" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/portfolio/wp-woocommerce.png" alt="WooCommerce Online Store" loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">WooCommerce Store</h3>
+                  <p class="project-category">WordPress</p>
+                </a>
+              </li>
+              
+              <!-- Information + WooCommerce Project -->
+              <li class="project-item active" data-filter-item data-category="WordPress">
+                <a href="https://revivelogix.com" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/portfolio/sage-theme-woo.png" alt="WooCommerce Store" loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">Sage 10 theme + WooCommerce Store</h3>
+                  <p class="project-category">WordPress + Sage 10</p>
+                </a>
+              </li>
+
+              <!-- Laravel Project -->
+              <li class="project-item active" data-filter-item data-category="Laravel">
+                <a href="https://app.axiompersonnel.co.uk/login" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/portfolio/laravel-crm.png" alt="Laravel CRM System" loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">CRM Dashboard</h3>
+                  <p class="project-category">Laravel</p>
+                </a>
+              </li>
+
+              <!-- Laravel + API -->
+              <li class="project-item active" data-filter-item data-category="Laravel">
+                <a href="https://quiickmedicine.ca" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/portfolio/laravel-inventory.png" alt="Laravel Inventory App" loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">Inventory Manager (REST API)</h3>
+                  <p class="project-category">Laravel</p>
+                </a>
+              </li>
+
+              <!-- Shopify Project -->
+              <li class="project-item active" data-filter-item data-category="Shopify">
+                <a href="https://pumpingstations.uk" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                    <img src="./assets/images/portfolio/shopify-theme.png" alt="Shopify" loading="lazy" />
+                  </figure>
+                  <h3 class="project-title">Shopify</h3>
+                  <p class="project-category">Shopify</p>
+                </a>
+              </li>
+
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #CONTACT
+      -->
+
+        <article class="contact" data-page="contact">
+          <header>
+            <h2 class="h2 article-title">Contact</h2>
+          </header>
+
+          <section class="contact-form">
+            <form id="my-form" action="https://formspree.io/f/xvgreobl" method="POST" class="form" data-form>
+              <div class="input-wrapper">
+                <input class="form-input" type="email" name="email" placeholder="Email address" data-form-input />
+              </div>
+              <div class="input-wrapper">
+                <input class="form-input" placeholder="Your Message" type="text" name="message" data-form-input />
+              </div>
+              <button class="form-btn" id="my-form-button" disabled data-form-btn><ion-icon
+                  name="paper-plane"></ion-icon>
+                <span>Send Message</span></button>
+              <p id="my-form-status"></p>
             </form>
+          </section>
+        </article>
+    </div>
+  </main>
 
-            <!-- Place this script at the end of the body tag -->
-            <script>
-                var form = document.getElementById("my-form");
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
 
-                async function handleSubmit(event) {
-                    event.preventDefault();
-                    var status = document.getElementById("my-form-status");
-                    var data = new FormData(event.target);
-                    fetch(event.target.action, {
-                        method: form.method,
-                        body: data,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    }).then(response => {
-                        if (response.ok) {
-                            status.innerHTML = "Thanks for your submission!";
-                            form.reset()
-                        } else {
-                            response.json().then(data => {
-                                if (Object.hasOwn(data, 'errors')) {
-                                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-                                } else {
-                                    status.innerHTML = "Oops! There was a problem submitting your form"
-                                }
-                            })
-                        }
-                    }).catch(error => {
-                        status.innerHTML = "Oops! There was a problem submitting your form"
-                    });
-                }
-                form.addEventListener("submit", handleSubmit)
-            </script>
-        </section>
-    </main>
-
-    <footer>
-        © <span id="year"></span> Nikhil Umaretiya • Built with ♥ and vanilla HTML/CSS
-    </footer>
-
-    <script>
-        // update footer year automatically
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
