@@ -1083,7 +1083,7 @@ main {
   align-items: flex-start;
 }
 
-.project-img::before {
+/* .project-img::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1096,8 +1096,8 @@ main {
 }
 
 .project-item>a:hover .project-img::before {
-  /* background: hsla(0, 0%, 0%, 0.5); */
-}
+  background: hsla(0, 0%, 0%, 0.5);
+} */
 
 .project-item-icon-box {
   --scale: 0.8;
@@ -1149,10 +1149,6 @@ main {
   -ms-transition: all 11s;
   -o-transition: all 11s;
   transition: all 11s;
-}
-
-.project-item>a:hover img {
-  transform: scale(1.1);
 }
 
 .project-title,
