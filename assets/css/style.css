@@ -1096,7 +1096,7 @@ main {
 }
 
 .project-item>a:hover .project-img::before {
-  background: hsla(0, 0%, 0%, 0.5);
+  /* background: hsla(0, 0%, 0%, 0.5); */
 }
 
 .project-item-icon-box {
