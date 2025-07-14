@@ -69,8 +69,7 @@
                         <div class="contact-info">
                             <p class="contact-title">Email</p>
 
-                            <a href="mailto:nikhilumaretiya17@gmail.com"
-                                class="contact-link">nikhilumaretiya17@gmail.com</a>
+                            <a href="mailto:nikhilumaretiya17@gmail.com" class="contact-link">nikhilumaretiya17@gmail.com</a>
                         </div>
                     </li>
 
@@ -766,12 +765,19 @@
                 </header>
 
                 <section class="contact-form">
-                    <form id="my-form" action="https://formspree.io/f/mrblzyop" method="POST">
-                        <label>Email:</label>
-                        <input type="email" name="email" />
-                        <label>Message:</label>
-                        <input type="text" name="message" />
-                        <button id="my-form-button">Submit</button>
+                    <form id="my-form" action="https://formspree.io/f/xvgreobl" method="POST" class="form" data-form>
+                        <div class="input-wrapper">
+                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required=""
+                                data-form-input>
+
+                            <input class="form-input" type="email" name="email" placeholder="Email address"
+                                data-form-input />
+                        </div>
+                        <input class="form-input" placeholder="Your Message" type="text" name="message"
+                            data-form-input />
+                        <button class="form-btn" id="my-form-button" disabled data-form-btn><ion-icon
+                                name="paper-plane"></ion-icon>
+                            <span>Send Message</span></button>
                         <p id="my-form-status"></p>
                     </form>
                 </section>
