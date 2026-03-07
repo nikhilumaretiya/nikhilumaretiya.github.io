@@ -10,13 +10,19 @@ export default function Navbar() {
             <ul className="navbar-list">
                 <li className="navbar-item">
                     <Link href="/" className={`navbar-link ${pathname === '/' ? 'active' : ''}`}>
-                        About
+                        Home
                     </Link>
                 </li>
 
                 <li className="navbar-item">
                     <Link href="/resume" className={`navbar-link ${pathname === '/resume' ? 'active' : ''}`}>
                         Resume
+                    </Link>
+                </li>
+
+                <li className="navbar-item">
+                    <Link href="/services" className={`navbar-link ${pathname === '/services' ? 'active' : ''}`}>
+                        Services
                     </Link>
                 </li>
 
