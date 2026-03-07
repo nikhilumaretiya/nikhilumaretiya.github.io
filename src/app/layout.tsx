@@ -4,6 +4,7 @@ import "./globals.css";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import SmoothScrollReveal from "./components/SmoothScrollReveal";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -38,6 +39,7 @@ export default function RootLayout({
             </SmoothScrollReveal>
           </div>
         </main>
+        <SpeedInsights />
       </body>
     </html>
   );
