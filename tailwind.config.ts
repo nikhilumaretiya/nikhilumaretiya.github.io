@@ -9,12 +9,6 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                'bg-gradient-onyx': 'var(--bg-gradient-onyx)',
-                'bg-gradient-jet': 'var(--bg-gradient-jet)',
-                'bg-gradient-accent-1': 'var(--bg-gradient-accent-1)',
-                'bg-gradient-accent-2': 'var(--bg-gradient-accent-2)',
-                'border-gradient-onyx': 'var(--border-gradient-onyx)',
-                'text-gradient-accent': 'var(--text-gradient-accent)',
                 'jet': 'var(--jet)',
                 'onyx': 'var(--onyx)',
                 'eerie-black-1': 'var(--eerie-black-1)',
@@ -25,6 +19,14 @@ const config: Config = {
                 'accent-color': 'var(--accent-color)',
                 'light-gray': 'var(--light-gray)',
                 'light-gray-70': 'var(--light-gray-70)',
+            },
+            backgroundImage: {
+                'bg-gradient-onyx': 'var(--bg-gradient-onyx)',
+                'bg-gradient-jet': 'var(--bg-gradient-jet)',
+                'bg-gradient-accent-1': 'var(--bg-gradient-accent-1)',
+                'bg-gradient-accent-2': 'var(--bg-gradient-accent-2)',
+                'border-gradient-onyx': 'var(--border-gradient-onyx)',
+                'text-gradient-accent': 'var(--text-gradient-accent)',
             },
             fontFamily: {
                 poppins: ['var(--ff-poppins)'],

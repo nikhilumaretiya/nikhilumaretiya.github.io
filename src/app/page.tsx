@@ -49,9 +49,9 @@ export default function Home() {
 
         <motion.p variants={itemVariants} className="text-light-gray text-lg md:text-xl max-w-2xl leading-relaxed mb-10 font-light">
           I build high-performance, scalable web solutions. Specializing in custom
-          <span className="text-white-2 font-medium"> WordPress</span>, robust
-          <span className="text-white-2 font-medium"> Laravel</span> apps, and headless
-          <span className="text-white-2 font-medium"> React</span> interfaces.
+          <span className="inline text-white-2 font-medium"> WordPress</span>, robust
+          <span className="inline text-white-2 font-medium"> Laravel</span> apps, and headless
+          <span className="inline text-white-2 font-medium"> React</span> interfaces.
         </motion.p>
 
         <motion.div variants={itemVariants} className="flex flex-wrap gap-4 items-center mb-12">
