@@ -1,67 +1,36 @@
-## 👋 About Me
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Hi, I'm **Nikhil**, a Full-Stack PHP Developer with over **7 years of experience** pecializing in **WordPress (Sage 10 + Bedrock)**, **PHP**, **Laravel**, and **Shopify**. I craft modern, scalable websites and applications using clean, maintainable code and follow best development practices. Passionate about performance optimization, custom theme/plugin development, and delivering user-friendly web solutions.
+## Getting Started
 
----
+First, run the development server:
 
-## 💼 Work Experience
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-### 🧑‍💻 Professional Freelancer  
-**Jul 2020 – Present**  
-- Delivered 100+ projects across WordPress, Laravel, and Shopify.
-- Developed custom **Sage 10** themes using ACF, Blade, Composer, and SCSS.
-- Created scalable **Laravel REST APIs** and advanced admin dashboards.
-- Customized Shopify storefronts with Liquid, metafields, and performance enhancements.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### 💼 PHP Web Developer – HNB Infotech  
-**Jan 2021 – Jul 2022**  
-- Maintained and enhanced CMS, e-commerce, and ERP modules using Laravel.
-- Built reusable components and optimized backend performance.
-- Worked with Bootstrap/jQuery on frontend integration.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-### 🏁 Web Development Trainee  
-**Apr 2018 – Jul 2018**  
-- Learned PHP, MVC structure, and MySQL basics.
-- Assisted in static website development and WordPress theme customization.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
----
+## Learn More
 
-## 🛠️ Skills
+To learn more about Next.js, take a look at the following resources:
 
-### 💻 Technical Skills
-- **Languages**: PHP, JavaScript, HTML5, CSS3, MySQL
-- **Frameworks/CMS**: Laravel, WordPress (Sage 10, ACF), Shopify (Liquid), Bootstrap
-- **Tools**: Git, Composer, npm, Webpack, Gulp, PhpMyAdmin, SCSS, Blade
-- **Integrations**: REST APIs, AJAX, JSON, Payment Gateways (Razorpay, Stripe)
-- **Database**: MySQL, MariaDB
-- **DevOps/Deployment**: GitHub Actions, SSH, cPanel, Plesk, Hostiger, GoDaddy, 123-reg, Docker (basic)
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### 🌐 Soft Skills
-- 🧠 Problem Solving  
-- 💬 Client Communication  
-- ⏱️ Time Management  
-- 🧾 Requirement Analysis  
-- 🌍 Remote Collaboration  
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
----
+## Deploy on Vercel
 
-## 🎓 Education
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-- **Master's in Computer Science (M.Sc. IT)**
-
----
-
-## 🌱 Current Focus
-
-- Deep diving into **WordPress (Sage 10 + Bedrock)** best practices
-- Enhancing Laravel + RESTful API development patterns
-- Learning **CI/CD pipelines and Dockerized deployments**
-- Building reusable design systems using SCSS + Blade components
-
----
-
-## 📫 Let's Connect
-
-- 🌐 **Portfolio**: [nikhilumaretiya.github.io](https://nikhilumaretiya.github.io)  
-- 💼 **LinkedIn**: [linkedin.com/in/nikhil-umaretiya](https://www.linkedin.com/in/nikhil-umaretiya)  
-- 📧 **Email**: nikhilumaretiya17@gmail.com
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
