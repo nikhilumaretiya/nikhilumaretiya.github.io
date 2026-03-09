@@ -11,15 +11,21 @@ export const metadata: Metadata = {
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Nikhil Umaretiya",
-    "jobTitle": "Senior PHP Developer",
-    "url": "https://nikhilumaretiya.github.io",
-    "sameAs": [
-      "https://github.com/nikhilumaretiya",
-      "https://linkedin.com/in/nikhilumaretiya"
-    ],
-    "knowsAbout": ["WordPress", "Laravel", "Shopify", "PHP", "React", "Next.js"],
+    "@type": "ProfilePage",
+    "dateCreated": new Date().toISOString(),
+    "dateModified": new Date().toISOString(),
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Nikhil Umaretiya",
+      "jobTitle": "Senior PHP Developer",
+      "description": "Senior PHP Developer specializing in high-performance WordPress, Laravel, and Shopify development.",
+      "url": "https://nikhilumaretiya.github.io",
+      "sameAs": [
+        "https://github.com/nikhilumaretiya",
+        "https://linkedin.com/in/nikhilumaretiya"
+      ],
+      "knowsAbout": ["WordPress", "Laravel", "Shopify", "PHP", "React", "Next.js"],
+    }
   };
 
   return (
