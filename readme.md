@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nikhil Umaretiya Portfolio
 
-## Getting Started
+Personal portfolio website of **Nikhil Umaretiya** — a **Senior PHP Developer** specializing in **WordPress, Laravel, and Shopify**.
 
-First, run the development server:
+Live Website: [nikhilumaretiya.vercel.app](https://nikhilumaretiya.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## About This Portfolio
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This portfolio showcases my work, technical expertise, and services as a freelance developer helping businesses, startups, and agencies build **fast, scalable, and SEO-optimized websites**. My focus is on delivering high-performance digital solutions using modern development practices and maintainable architecture. :contentReference[oaicite:1]{index=1}
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## What I Do
 
-To learn more about Next.js, take a look at the following resources:
+- Custom **WordPress development** with Sage, Bedrock, ACF, and WooCommerce
+- **Laravel development** for dashboards, APIs, and scalable backend systems
+- **Shopify development** with custom themes and performance optimization
+- **Performance audits** and Core Web Vitals improvements
+- Technical solutions for agencies, startups, and e-commerce businesses :contentReference[oaicite:2]{index=2}
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Featured Work
 
-## Deploy on Vercel
+This portfolio includes selected project case studies such as:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Enterprise Inventory System** — Laravel, MySQL, AWS
+- **Eco-Friendly Marketplace** — WordPress, Sage 10, WooCommerce
+- **SaaS Analytics Dashboard** — React, Next.js, Tailwind
+- **Luxury Fashion Store** — Shopify, Liquid, JavaScript :contentReference[oaicite:3]{index=3}
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Technology Stack
+
+Technologies highlighted in this portfolio include:
+
+- PHP
+- Laravel
+- WordPress
+- Shopify
+- React
+- Next.js
+- Tailwind
+- AWS :contentReference[oaicite:4]{index=4}
+
+---
+
+## Who I Work With
+
+I work with:
+
+- **Digital Agencies** — white-label development for client projects
+- **SaaS Startups** — MVPs, dashboards, and scalable systems
+- **E-commerce Brands** — custom stores optimized for conversions :contentReference[oaicite:5]{index=5}
+
+---
+
+## Services
+
+- WordPress Development
+- Laravel Application Development
+- Shopify Development
+- Performance Optimization
+- Technical Audits :contentReference[oaicite:6]{index=6}
+
+---
+
+## Project Budget
+
+Typical project budgets start from **$1,500+**. :contentReference[oaicite:7]{index=7}
+
+---
+
+## Contact
+
+**Nikhil Umaretiya**  
+Senior PHP Developer  
+Email: **nikhilumaretiya17@gmail.com** :contentReference[oaicite:8]{index=8}
+
+---
+
+## Live Portfolio
+
+Visit the live site here:  
+**https://nikhilumaretiya.vercel.app/**
+
+---
+
+## License
+
+This project is for personal portfolio use unless otherwise specified.
