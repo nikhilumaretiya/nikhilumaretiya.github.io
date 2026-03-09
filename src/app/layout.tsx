@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     canonical: 'https://nikhilumaretiya.github.io',
   },
   verification: {
-    google: 'oI1p7W7zHhmh4RvvHppDpa-ftUrBVsSExioCw9MVFUM',
+    google: 'QH51cM4fkXGnRkw92a4CvqSMhQCjzV4jil_Yw1MhxC4',
   },
   openGraph: {
     title: 'Nikhil Umaretiya – Senior PHP Developer',
