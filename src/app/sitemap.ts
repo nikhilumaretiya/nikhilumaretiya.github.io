@@ -2,7 +2,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://nikhilumaretiya.github.io'
+    const baseUrl = 'https://nikhilumaretiya.vercel.app'
 
     return [
         {
@@ -34,6 +34,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.5,
+        },
+        {
+            url: `${baseUrl}/resume`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.7,
         },
     ]
 }
