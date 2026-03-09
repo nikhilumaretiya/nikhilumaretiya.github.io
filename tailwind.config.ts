@@ -1,42 +1,70 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+    darkMode: ["class"],
     content: [
-        "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-        "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-        "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+        "./src/pages/**/*.{ts,tsx}",
+        "./src/components/**/*.{ts,tsx}",
+        "./src/app/**/*.{ts,tsx}",
     ],
     theme: {
         extend: {
             colors: {
-                'jet': 'var(--jet)',
-                'onyx': 'var(--onyx)',
-                'eerie-black-1': 'var(--eerie-black-1)',
-                'eerie-black-2': 'var(--eerie-black-2)',
-                'smoky-black': 'var(--smoky-black)',
-                'white-1': 'var(--white-1)',
-                'white-2': 'var(--white-2)',
-                'accent-color': 'var(--accent-color)',
-                'light-gray': 'var(--light-gray)',
-                'light-gray-70': 'var(--light-gray-70)',
+                background: 'var(--background)',
+                foreground: 'var(--foreground)',
+                card: {
+                    DEFAULT: 'var(--card)',
+                    foreground: 'var(--card-foreground)',
+                },
+                popover: {
+                    DEFAULT: 'var(--popover)',
+                    foreground: 'var(--popover-foreground)',
+                },
+                primary: {
+                    DEFAULT: 'var(--primary)',
+                    foreground: 'var(--primary-foreground)',
+                },
+                secondary: {
+                    DEFAULT: 'var(--secondary)',
+                    foreground: 'var(--secondary-foreground)',
+                },
+                muted: {
+                    DEFAULT: 'var(--muted)',
+                    foreground: 'var(--muted-foreground)',
+                },
+                accent: {
+                    DEFAULT: 'var(--accent)',
+                    foreground: 'var(--accent-foreground)',
+                },
+                destructive: {
+                    DEFAULT: 'var(--destructive)',
+                    foreground: 'var(--destructive-foreground)',
+                },
+                border: 'var(--border)',
+                input: 'var(--input)',
+                ring: 'var(--ring)',
             },
-            backgroundImage: {
-                'bg-gradient-onyx': 'var(--bg-gradient-onyx)',
-                'bg-gradient-jet': 'var(--bg-gradient-jet)',
-                'bg-gradient-accent-1': 'var(--bg-gradient-accent-1)',
-                'bg-gradient-accent-2': 'var(--bg-gradient-accent-2)',
-                'border-gradient-onyx': 'var(--border-gradient-onyx)',
-                'text-gradient-accent': 'var(--text-gradient-accent)',
+            borderRadius: {
+                lg: 'var(--radius)',
+                md: 'calc(var(--radius) - 2px)',
+                sm: 'calc(var(--radius) - 4px)',
             },
             fontFamily: {
-                poppins: ['var(--ff-poppins)'],
+                sans: ['var(--font-inter)'],
             },
-            boxShadow: {
-                '1': 'var(--shadow-1)',
-                '2': 'var(--shadow-2)',
-                '3': 'var(--shadow-3)',
-                '4': 'var(--shadow-4)',
-                'accent': 'var(--shadow-accent)',
+            animation: {
+                'fade-in': 'fadeIn 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out forwards',
+            },
+            keyframes: {
+                fadeIn: {
+                    '0%': { opacity: '0' },
+                    '100%': { opacity: '1' },
+                },
+                slideUp: {
+                    '0%': { opacity: '0', transform: 'translateY(20px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                },
             },
         },
     },
